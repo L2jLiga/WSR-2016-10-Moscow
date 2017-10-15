@@ -1,0 +1,190 @@
+html
+{
+	font-size: 16pt;
+	font-family: Arial;
+}
+body
+{
+	margin: 0 auto;
+	padding:0;
+}
+
+#form
+{
+	height: 100px;
+	width: 100%;
+	padding: 10px 20px;
+	background-image: linear-gradient(to bottom, RGB(122,177,255) 90%, RGBA(255,255,255,0) 100%);
+}
+#login
+{
+	float: right;
+}
+#login > input
+{
+	display: block;
+	width: 250px;
+	box-sizing: border-box;
+	background: white;
+	color: #666;
+	border: 1px solid black;
+	margin-bottom: -1px;
+	padding: 5px;
+}
+#login > p, #login > a
+{
+	font-size: .8rem;
+	text-align: right;
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+@media (min-width: 768px)
+{
+	#form, #panel
+	{
+		max-width: 900px;
+		padding: 10px calc(50vw - 450px);
+	}
+}
+
+#sheeps_list
+{
+	border-bottom: 1px solid;
+}
+#sheeps_list > h1
+{
+	text-align: center;
+}
+#sheeps_list > div
+{
+	margin: 3px;
+	border: 1px solid;
+	display: inline-block;
+	padding: 5px 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#sheep_info > h2
+{
+	text-align: center;
+}
+
+.luxe,
+.econom,
+.zero
+{
+	width: 72vh;
+    margin: auto;
+}
+
+.row
+{
+	display: flex;
+	flex-direction: row;
+}
+.row div
+{
+	display: flex;
+	flex: 0 1 7vh;
+	height: 7vh;
+	justify-content: center;
+	border: 1px solid black;
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+.row div span
+{
+	display: block;
+	color: white;
+	width: 100%;
+	line-height: 7vh;
+	text-align: center;
+}
+.busy {
+    background-color: red;
+}
+
+.free {
+    background-color: green;
+}
+
+.delete
+{
+	background: RGBA(255,0,0,.6);
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+	height: 90px;
+	width: 90px;
+	border: 1px solid black;
+	font-size: 76px;
+	line-height: 90px;
+	text-align: center;
+}
+
+h2 + hr + form > input:focus
+{
+	background: #FFF;
+	color: #222;
+}
+
+h2 + hr + form,
+h2 + hr + form + button
+{
+	margin-left: calc(50% - 80px);
+}
+
+h2 + hr + form > input,
+h2 + hr + form + button
+{
+	display: block;
+	width: 150px;
+	padding: 10px;
+	margin-bottom: -1px;
+	border: 1px solid black;
+	color: #444;
+	background: #EEE;
+	box-sizing: border-box;
+}
+
+article
+{
+	background: #CCC;
+	display: inline-block;
+	width: calc(50% - 40px);
+	vertical-align: top;
+	padding: 15px;
+	margin: 3px;
+}
+article > h1
+{
+	font-size: 1rem;
+}
+article > h1 > time
+{
+	font-size: .75rem;
+}
+article > a,
+article > div
+{
+	text-decoration:none;
+	font-size: 1rem;
+	text-align: center;
+}
+article > a
+{
+	display: inline-block;
+	padding: 5px;
+	color: #f30;
+	background-color: white;
+	margin: 10px calc(50% - 125px);
+	width: 250px;
+}
+article > div > p
+{
+	font-weight: 600;
+	text-indent: 1.25rem;
+	text-align: left;
+}

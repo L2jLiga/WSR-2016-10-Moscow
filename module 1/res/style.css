@@ -1,0 +1,403 @@
+/*
+ * Единые настройки стилей для всей страницы
+ */
+@font-face {
+  font-family: FontAwesome;
+  src: url(FontAwesome.otf);
+}
+html
+{
+	font-size: calc((100vw - 320px)/(1366 - 320)*(20 - 16) + 16px);
+	font-family: FontAwesome, Arial;
+}
+a
+{
+	text-decoration: none;
+	color: black;
+}
+body
+{
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1366px;
+}
+
+/*
+ * Hotfix: якорь, для возврата в ТОП страницы
+ */
+#top
+{
+	position: absolute;
+	font-size: 0;
+	width: 0;
+	height:0;
+	top: 0;
+	left: 0;
+}
+
+/*
+ * Фиксированная панель навигации
+ */
+nav
+{
+	top: 0;
+	position: fixed;
+	height: 70px;
+	width: 100%;
+	max-width: inhereit;
+	background: white;
+	overflow: hidden;
+	background-image: linear-gradient(to bottom, RGB(122,177,255) 90%, RGBA(255,255,255,0) 100%);
+	z-index: 2;
+}
+/*
+ * Стиль пунктов меню
+ */
+nav > a
+{
+	display: inline-block;
+	vertical-align: middle;
+	height: 50px;
+	margin: 5px 10px;
+	line-height: 50px;
+	padding: 0 10px;
+	color: white;
+}
+
+/*
+ * форма авторизации в панеле навигации
+ */
+nav > form
+{
+	float: right;
+	text-align: center;
+	margin: 8px 20px;
+}
+nav > form > a
+{
+	display: block;
+}
+nav > form > input
+{
+	padding: 5px;
+	box-sizing: border-box;
+	height: 30px;
+	border: none;
+	background-color: white;
+}
+nav > form > a
+{
+	color: white;
+}
+/* 
+ * В следующем модуле сделать стили для авторизированного пользователя
+ */
+
+
+/*
+ * настройка "большой презенташки"
+ */
+header,
+body > article
+{
+	margin: 15px;
+}
+header
+{
+	margin-top: 80px;
+}
+
+header > h1,
+article > h1
+{
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	border: 1px solid;
+}
+
+/*
+ * заголовок
+ */
+header > h1
+{
+	background-color: RGBA(122,177,255,.8);
+}
+
+/*
+ * Блок с дивизом
+ */
+header > article
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+	border-bottom: 2px solid RGBA(122,177,255,.4);
+	box-shadow: 0 -5px 20px 0px rgba(122, 177, 255, .6);
+}
+header > article > div
+{
+	justify-content: center;
+	display: flex;
+	flex: 0 1 30%;
+}
+header > article > div:last-child
+{
+	flex-direction: column;
+	font-size: 3rem;
+}
+header > article > div > p
+{
+	margin: 0;
+	display: flex;
+}
+header > article > div:last-child > p:nth-child(1)
+{
+	color: RGB(248,0,0);
+}
+header > article > div:last-child > p:nth-child(4)
+{
+	color: RGB(45,170,60);
+}
+header > article > div:last-child > p:nth-child(2n + 2)
+{
+	padding-left: 50px;
+}
+/*
+ * Блок со слоганом
+ */
+header > div
+{
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 600;
+	box-shadow: 0 2px 20px -3px rgb(122, 177, 255);
+}
+/*
+ * Три кнопочки
+ */
+header > menu
+{
+	position: relative;
+	background-image: url(Buttons.png);
+	height: 95px;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	width: 630px;
+	margin: 0 auto;
+	padding: 0;
+}
+header > menu > a
+{
+	display: inline-block;
+	position: absolute;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: .2s color ease;
+}
+header > menu > a:nth-of-type(1)
+{
+	top: 5px;
+	left: 50px;
+}
+header > menu > a:nth-of-type(2)
+{
+	top: 20px;
+	left: 0;
+	right:0;
+	width: 140px;
+	text-align: center;
+	margin: auto;
+	font-size: 1.3rem;
+}
+header > menu > a:nth-of-type(3)
+{
+	right: 70px;
+	top: 5px;
+}
+header > menu > a:hover
+{
+	color: RGB(160,64,64);
+}
+
+/*
+ * Пункты сайта
+ */
+body > article
+{
+	box-shadow: 0 5px 15px -3px gray;
+}
+body > article:nth-of-type(1) > h1
+{
+	background-color: RGBA(248,0,0,.6);
+}
+body > article:nth-of-type(2) > h1
+{
+	background-color: RGBA(45,170,60,0.5);
+}
+body > article:nth-of-type(3) > h1
+{
+	background-color: RGBA(122,177,255,.6);
+}
+body > article > h1 > time
+{
+	font-size: medium;
+}
+body > article > div
+{
+	padding: 5px 10px;
+}
+body > article > div > p
+{
+	text-indent: 1.25rem;
+	line-height: 1.5;
+}
+
+/*
+ * Подвал страницы
+ */
+footer
+{
+	height: 70px;
+	overflow: hidden;
+	background-image: linear-gradient(to top, RGB(122,177,255) 90%, RGBA(255,255,255,0) 100%);
+}
+footer > div
+{
+	padding: 5px;
+	line-height: 60px;
+	color: white;
+}
+
+/*
+ * Фиксы адаптивности
+ */
+@media(max-width: 893px)
+{
+	nav
+	{
+		height: auto;
+		text-align: center;
+		background-image: linear-gradient(to bottom, RGB(122,177,255) 95%, RGBA(255,255,255,0) 100%);
+		padding-bottom: 5px;
+	}
+	nav > a
+	{
+		height: 30px;
+		line-height: 40px;
+	}
+	nav > form
+	{
+		float: none;
+	}
+	header
+	{
+		margin-top: 120px;
+	}
+}
+@media (max-width: 666px) /* О даааа, число дьявола }:)*/
+{
+	/* Чиним кнопочки заказа */
+	header > menu
+	{
+		width: 100%;
+		background-size: 100%;
+	}
+	header > menu > a
+	{
+		font-weight: 600;
+	}
+	header > menu > a:nth-of-type(1)
+	{
+		left: 40px;
+	}
+	header > menu > a:nth-of-type(2)
+	{
+		top: 10px;
+	}
+	header > menu > a:nth-of-type(3)
+	{
+		right: 50px;
+	}
+}
+
+@media(max-width: 570px)
+{
+	/* Чиним нашу шапочку */
+	header > article,
+	header > article > div,
+	header > article > div > p
+	{
+		display: block;
+		text-align: center;
+	}
+	header > article > div > img
+	{
+		width: 100%;
+	}
+	header > article > div > p
+	{
+		margin-left: calc(50vw - 150px);
+		text-align: left;
+	}
+}
+
+@media(max-width: 470px)
+{
+	/* Перерабатываем панель заказов */
+	header > menu
+	{
+		background: none;
+		height: auto;
+	}
+	header > menu > a
+	{
+		position: static;
+		display: block;
+		font-size: initial !important;
+		text-align: center;
+		width: 100% !important;
+		box-shadow: 0 2px 20px -3px rgb(122, 177, 255);
+	}
+}
+
+@media(max-width: 450px)
+{
+	nav
+	{
+		position: static;
+		background-image: linear-gradient(to bottom, RGB(122,177,255) 40px, RGBA(255,255,255,0) 39px, RGBA(255,255,255,0) 46px, RGB(122,177,255) 45px);
+	}
+	nav > a
+	{
+		line-height: 30px;
+	}
+	nav > form
+	{
+		margin-top: 15px;
+	}
+	header
+	{
+		margin-top: 10px;
+	}
+}
+
+@media(max-width: 403px)
+{
+	nav > form > input
+	{
+		margin-left: 25%;
+		display: block;
+		width: 50%;
+		border: 1px solid RGBA(172,172,172,.6);
+		margin-top: -1px;
+	}
+}
+@media (max-width: 402px)
+{
+	nav
+	{
+		background-image: linear-gradient(to bottom, RGB(122,177,255) 80px, RGBA(255,255,255,0) 79px, RGBA(255,255,255,0) 86px, RGB(122,177,255) 85px);
+	}
+}

@@ -1,0 +1,47 @@
+.luxe,
+.econom,
+.zero
+{
+	width: 72vh;
+    margin: auto;
+}
+
+.row
+{
+	display: flex;
+	flex-direction: row;
+}
+.row div
+{
+	display: flex;
+	flex: 0 1 7vh;
+	height: 7vh;
+	justify-content: center;
+	border: 1px solid black;
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+.row div span
+{
+	display: block;
+	color: white;
+	width: 100%;
+	line-height: 7vh;
+	text-align: center;
+}
+.busy {
+    background-color: red;
+}
+
+.free {
+    background-color: green;
+}
+
+.forYou {
+    background-color: RGB(122,177,255);
+}
+
+
+header > article > div:last-child > p:nth-child(2) {
+    padding-left: 0;
+}
